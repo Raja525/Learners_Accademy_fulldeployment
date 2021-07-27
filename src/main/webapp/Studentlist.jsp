@@ -73,7 +73,7 @@ left:350px;
 	<div class="row">
 	<div id="box1" class="col-lg-4">
 		<a id="logout" href="AdminLogin.jsp">Logout</a>
-		<a href="HomePage.jsp">Class Report</a>
+		<a href="home.jsp">Class Report</a>
 		<a href="AssignClasses.jsp">Assign Classes</a>
 		<a href="AssignTeachers.jsp">Assign Teachers</a>
 		<a href="Studentlist.jsp">Students List</a>
@@ -91,9 +91,10 @@ left:350px;
 			<tbody>
 		<%
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection con=DriverManager.getConnection("jdbc:mysql://aa1y1ghile0p7t1.cv2uqxokjyuy.us-east-1.rds.amazonaws.com:3306/learnersacademy","root","rootraja");
+	//	Connection con=DriverManager.getConnection("jdbc:mysql://aa1y1ghile0p7t1.cv2uqxokjyuy.us-east-1.rds.amazonaws.com:3306/learnersacademy","root","rootraja");
+		Connection con=DriverManager.getConnection("jdbc:mysql://awsdb.c1dzwtudyvfv.us-east-2.rds.amazonaws.com:3306/learnersacademy","root","rootraja");
 		Statement st=con.createStatement();
-		ResultSet rs=st.executeQuery("select * from Studenttable;");
+		ResultSet rs=st.executeQuery("select * from studentstable;");
 
 		while(rs.next())
 		{
